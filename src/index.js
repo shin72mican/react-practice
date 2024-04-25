@@ -15,6 +15,7 @@ import {
 import MyTop from './MyTop';
 import MyHello from './MyHello';
 import MyArticle from './MyArticle';
+import MySearch from './MySearch';
 import NotFound from './NotFound';
 
 const router = createBrowserRouter(
@@ -22,7 +23,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/" element={<MyTop />} />
       <Route path="hello" element={<MyHello />} />
-      <Route path="article" element={<MyArticle />} />
+      <Route path="article/:id" element={<MyArticle />} />
+      <Route path="search/*" element={<MySearch />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )

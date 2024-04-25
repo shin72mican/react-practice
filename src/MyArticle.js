@@ -1,6 +1,9 @@
+import { useParams } from 'react-router-dom';
+
 const MyArticle = () => {
+  const params = useParams();
   return (
-    <div>オンライン公開 技術記事一覧</div>
+    <div>No.{params.id}の記事情報です！</div>
   );
 }
 
